@@ -19,12 +19,18 @@ export const metadata = {
   title: { default: "letsteach — Practical courses for real careers.", template: "%s | letsteach" },
   description: "Short, focused courses taught by working professionals. Learn design, engineering, data, and more. Pay once, learn forever.",
   keywords: ["online courses india", "learn programming", "ui ux course", "python course", "affordable online learning"],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "letsteach — Practical courses for real careers.",
     description: "Short, focused courses taught by working professionals.",
     url: "https://letsteach.com",
     siteName: "letsteach",
     type: "website",
+    images: [{ url: "/favicon.png" }],
   },
 };
 
