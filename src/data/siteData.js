@@ -1,7 +1,6 @@
 // HOW TO ADD COURSE IMAGES:
-// 1. Put your image files inside /public/courses/ folder
-//    e.g. /public/courses/react-course.jpg
-// 2. Set the image field to "/courses/react-course.jpg"
+// 1. Put your image files inside /public/image/courses/ folder
+// 2. Set the image field to "/image/courses/your-image.png"
 // 3. If no image is set (null), the icon fallback is shown automatically
 
 export const COURSES = [
@@ -12,8 +11,8 @@ export const COURSES = [
     categoryColor: "bg-amber-900/30 text-amber-400",
     thumbBg: "bg-zinc-900",
     thumbIcon: "⬡",
-    // image: "/courses/system-design.jpg",   ← uncomment and set your image path
-    image: null,
+    image: "/image/courses/system-design.png",
+    imageAlt: "Server architecture diagram with interconnected nodes — System Design for Backend Engineers course",
     title: "System Design for Backend Engineers",
     instructor: "Rahul Sharma",
     initials: "RS",
@@ -49,8 +48,8 @@ export const COURSES = [
     categoryColor: "bg-violet-900/30 text-violet-400",
     thumbBg: "bg-zinc-900",
     thumbIcon: "◈",
-    // image: "/courses/uiux-design.jpg",
-    image: null,
+    image: "/image/courses/uiux-design.png",
+    imageAlt: "Figma UI design interface showing components and wireframes — UI/UX Design Figma to Portfolio course",
     title: "UI/UX Design: Figma to Portfolio",
     instructor: "Neha Joshi",
     initials: "NJ",
@@ -85,8 +84,8 @@ export const COURSES = [
     categoryColor: "bg-teal-900/30 text-teal-400",
     thumbBg: "bg-zinc-900",
     thumbIcon: "◎",
-    // image: "/courses/python-data.jpg",
-    image: null,
+    image: "/image/courses/python-data.png",
+    imageAlt: "Python code with data charts and analytics visualisation — Python for Data Analysis course",
     title: "Python for Data Analysis",
     instructor: "Amit Verma",
     initials: "AV",
@@ -121,8 +120,8 @@ export const COURSES = [
     categoryColor: "bg-rose-900/30 text-rose-400",
     thumbBg: "bg-zinc-900",
     thumbIcon: "▲",
-    // image: "/courses/digital-marketing.jpg",
-    image: null,
+    image: "/image/courses/digital-marketing.png",
+    imageAlt: "Laptop showing Google Analytics dashboard with growth charts — Digital Marketing Fundamentals course",
     title: "Digital Marketing Fundamentals",
     instructor: "Priya Kapoor",
     initials: "PK",
@@ -157,8 +156,8 @@ export const COURSES = [
     categoryColor: "bg-sky-900/30 text-sky-400",
     thumbBg: "bg-zinc-900",
     thumbIcon: "◇",
-    // image: "/courses/product-thinking.jpg",
-    image: null,
+    image: "/image/courses/product-thinking.png",
+    imageAlt: "Product roadmap with sticky notes and user journey map — Product Thinking for Beginners course",
     title: "Product Thinking for Beginners",
     instructor: "Siddharth Rao",
     initials: "SR",
@@ -193,8 +192,8 @@ export const COURSES = [
     categoryColor: "bg-amber-900/30 text-amber-400",
     thumbBg: "bg-zinc-900",
     thumbIcon: "◉",
-    // image: "/courses/react-beginners.jpg",
-    image: null,
+    image: "/image/courses/react-beginners.png",
+    imageAlt: "React.js logo with JSX code on dark screen — React.js for Beginners course",
     title: "React.js for Beginners",
     instructor: "Dev Mehta",
     initials: "DM",

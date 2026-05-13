@@ -17,7 +17,6 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function CourseDetailPage({ params }) {
-  // Next.js 15 — params is a Promise, must be awaited
   const { slug } = await params;
   const course = COURSES.find((c) => c.slug === slug);
   if (!course) notFound();
@@ -27,10 +26,7 @@ export default async function CourseDetailPage({ params }) {
   ).slice(0, 3);
 
   const discount = Math.round(
-    (1 -
-      parseInt(course.price.replace(/\D/g, "")) /
-        parseInt(course.originalPrice.replace(/\D/g, ""))) *
-      100
+    (1 - parseInt(course.price.replace(/\D/g, "")) / parseInt(course.originalPrice.replace(/\D/g, ""))) * 100
   );
 
   return (
@@ -84,13 +80,14 @@ export default async function CourseDetailPage({ params }) {
           {/* Enroll card */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl p-6 sticky top-20">
-              {/* Thumbnail — image or fallback */}
+              {/* Thumbnail */}
               <div className={`${course.image ? "" : course.thumbBg} h-40 rounded-xl flex items-center justify-center mb-5 overflow-hidden relative`}>
                 {course.image ? (
                   <Image
                     src={course.image}
-                    alt={course.title}
+                    alt={course.imageAlt || course.title}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 400px"
                     className="object-cover rounded-xl"
                   />
                 ) : (

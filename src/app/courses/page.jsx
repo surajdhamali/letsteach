@@ -33,7 +33,6 @@ export default function CoursesPage() {
             All <em className="not-italic text-amber-400">Courses</em>
           </h1>
           <p className="text-zinc-400 text-base mb-8">6,800+ courses across 80+ topics. Something for every stage of your career.</p>
-          {/* Search bar */}
           <div className="relative max-w-xl">
             <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
@@ -52,7 +51,6 @@ export default function CoursesPage() {
       <div className="max-w-6xl mx-auto px-6 py-10">
         {/* Filters row */}
         <div className="flex flex-col md:flex-row gap-4 mb-8">
-          {/* Category tabs */}
           <div className="flex gap-2 flex-wrap flex-1">
             <button
               onClick={() => setActiveCategory("All")}
@@ -70,8 +68,6 @@ export default function CoursesPage() {
               </button>
             ))}
           </div>
-
-          {/* Level + Sort */}
           <div className="flex gap-3 flex-shrink-0">
             <select
               value={activeLevel}
@@ -90,13 +86,11 @@ export default function CoursesPage() {
           </div>
         </div>
 
-        {/* Results count */}
         <p className="text-sm text-zinc-500 mb-6">
           Showing <span className="font-semibold text-zinc-900">{filtered.length}</span> courses
           {activeCategory !== "All" && <> in <span className="font-semibold text-zinc-900">{activeCategory}</span></>}
         </p>
 
-        {/* Grid */}
         {filtered.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filtered.map((course) => (

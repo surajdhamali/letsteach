@@ -90,18 +90,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── LEARNERS WORK AT ─── */}
-<div className="bg-white border-y border-zinc-100 px-6 py-5">
-  <div className="max-w-6xl mx-auto flex items-center gap-8 overflow-x-auto scrollbar-hide">
-    <span className="text-xs font-semibold text-zinc-300 uppercase tracking-widest whitespace-nowrap flex-shrink-0">
+{/* ─── LEARNERS WORK AT ─── */}
+<div className="bg-zinc-900 px-6 py-4">
+  <div className="max-w-6xl mx-auto flex items-center gap-6 overflow-x-auto scrollbar-hide">
+    <span className="text-xs font-semibold text-zinc-500 uppercase tracking-widest whitespace-nowrap flex-shrink-0">
       Learners work at
     </span>
-    <div className="w-px h-5 bg-zinc-100 flex-shrink-0" />
+    <div className="w-px h-4 bg-zinc-700 flex-shrink-0" />
     <div className="flex items-center gap-10 flex-1 justify-between">
       {TRUST_LOGOS.map((logo) => (
         <span
           key={logo}
-          className="text-sm font-bold text-zinc-300 whitespace-nowrap tracking-wide hover:text-zinc-500 transition-colors cursor-default"
+          className="text-sm font-semibold text-zinc-400 whitespace-nowrap tracking-wide hover:text-amber-400 transition-colors cursor-default"
         >
           {logo}
         </span>

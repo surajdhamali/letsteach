@@ -9,22 +9,24 @@ export default function CourseCard({ course, variant = "default" }) {
       href={`/courses/${course.slug}`}
       className="group bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-amber-400 hover:shadow-lg hover:shadow-amber-50 transition-all duration-200 flex flex-col"
     >
-      {/* Thumbnail — shows image if provided, falls back to icon */}
-      <div className={`${course.image ? "" : course.thumbBg} ${compact ? "h-28" : "h-40"} flex items-center justify-center relative flex-shrink-0 overflow-hidden`}>
+      {/* Thumbnail */}
+      <div className={`${compact ? "h-28" : "aspect-video w-full"} relative flex-shrink-0 overflow-hidden rounded-t-2xl`}>
         {course.image ? (
           <Image
             src={course.image}
-            alt={course.title}
+            alt={course.imageAlt || course.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
-          <span className={`${compact ? "text-3xl" : "text-4xl"} opacity-40`}>
-            {course.thumbIcon}
-          </span>
+          <div className={`${course.thumbBg} w-full h-full flex items-center justify-center`}>
+            <span className={`${compact ? "text-3xl" : "text-4xl"} opacity-40`}>
+              {course.thumbIcon}
+            </span>
+          </div>
         )}
 
-        {/* Category pill — overlaid on top of image or icon */}
         <span className={`absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full ${course.categoryColor} ${course.image ? "bg-black/50 text-white" : ""}`}>
           {course.category.toUpperCase()}
         </span>
