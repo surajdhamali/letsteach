@@ -273,16 +273,16 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
               >
-                <Link
-                  href={`/courses?category=${encodeURIComponent(cat.name)}`}
-                  className={`group flex items-center gap-3 px-4 py-3.5 rounded-xl border ${cat.color} hover:shadow-md hover:scale-[1.02] transition-all`}
-                >
-                  <span className="text-xl group-hover:scale-110 transition-transform">{cat.icon}</span>
-                  <div>
-                    <div className="text-sm font-semibold">{cat.name}</div>
-                    <div className="text-xs opacity-70">{cat.count} courses</div>
-                  </div>
-                </Link>
+              <Link
+  href={`/courses?category=${encodeURIComponent(cat.name)}`}
+  className={`group flex flex-col gap-1.5 px-3 py-3 md:flex-row md:items-center md:gap-3 md:px-4 md:py-3.5 rounded-xl border ${cat.color} hover:shadow-md hover:scale-[1.02] transition-all`}
+>
+  <span className="text-lg md:text-xl group-hover:scale-110 transition-transform">{cat.icon}</span>
+  <div>
+    <div className="text-xs md:text-sm font-semibold leading-tight">{cat.name}</div>
+    <div className="text-xs opacity-70">{cat.count} courses</div>
+  </div>
+</Link>
               </motion.div>
             ))}
           </div>
@@ -484,15 +484,14 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 whileHover={{ y: -4, boxShadow: "0 12px 40px rgba(0,0,0,0.08)", transition: { duration: 0.2 } }}
-                className="bg-white border border-zinc-200 rounded-2xl p-5"
-              >
-                <div className="flex gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-amber-400 text-xs">★</span>
-                  ))}
-                </div>
-                <p className="text-sm text-zinc-600 leading-relaxed mb-4">"{t.quote}"</p>
-                <div className="flex items-center gap-3">
+                className="bg-white border border-zinc-200 rounded-2xl p-5 hover:shadow-md transition-shadow flex flex-col">
+  <div className="flex gap-1 mb-3">
+    {[...Array(5)].map((_, i) => (
+      <span key={i} className="text-amber-400 text-xs">★</span>
+    ))}
+  </div>
+  <p className="text-sm text-zinc-600 leading-relaxed mb-4 flex-1">"{t.quote}"</p>
+  <div className="flex items-center gap-3">
                   <div className={`w-9 h-9 rounded-full ${t.bg} flex items-center justify-center text-xs font-bold text-white flex-shrink-0`}>
                     {t.initials}
                   </div>

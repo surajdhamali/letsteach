@@ -16,18 +16,37 @@ export default function BlogPage() {
 
   return (
     <div className="pt-14 min-h-screen bg-zinc-50">
-      {/* Header */}
-      <div className="bg-zinc-950 px-6 py-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-xs font-semibold text-amber-400 uppercase tracking-widest mb-3">Blog</div>
-          <h1 className="font-display text-4xl md:text-5xl font-semibold text-white tracking-tight mb-4">
-            Ideas worth <em className="not-italic text-amber-400">learning.</em>
-          </h1>
-          <p className="text-zinc-400 text-base max-w-lg">
-            Practical advice on learning, design, engineering, and building a career you actually want.
-          </p>
-        </div>
+     {/* Header */}
+<div className="bg-zinc-950 px-6 py-20">
+  <div className="max-w-6xl mx-auto">
+    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <div className="text-xs font-semibold text-amber-400 uppercase tracking-widest mb-4">Blog</div>
+        <h1 className="font-display text-5xl md:text-6xl font-semibold text-white tracking-tight leading-[1.06] mb-5">
+          Ideas worth<br />
+          <em className="not-italic text-amber-400">learning.</em>
+        </h1>
+        <p className="text-zinc-400 text-base leading-relaxed max-w-md">
+          Practical advice on learning, design, engineering, and building a career you actually want.
+        </p>
       </div>
+
+      {/* Right side stats */}
+      <div className="flex items-center gap-8 flex-shrink-0 pb-1">
+        {[
+          { value: "6",     label: "Articles" },
+          { value: "4",     label: "Topics" },
+          { value: "7 min", label: "Avg read" },
+        ].map((s, i) => (
+          <div key={i} className="text-center">
+            <div className="font-display text-2xl font-bold text-white tracking-tight mb-0.5">{s.value}</div>
+            <div className="text-xs text-zinc-500">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Featured posts */}
       <div className="bg-white border-b border-zinc-100 px-6 py-12">
